@@ -1,9 +1,24 @@
+/**
+ * 概述： find() 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+ *
+ * 参数：
+ * - callback
+ *   - currentValue
+ *   - index
+ *   - arr
+ * - thisArgs
+ *
+ * 要点：
+ * 1.跳过数组中未被初始化的元素（empty），不执行回调函数
+ * 2.返回第一个符合条件的元素，否则返回undefined
+ */
 Array.prototype._find = function (callback, thisArgs) {
     if (!this) throw new TypeError('this is null or undefined');
     if (typeof callback !== 'function') throw new TypeError(callback + 'is not a fuunction');
 
     const arr = this,
         len = arr.length;
+
 
     for (let i = 0; i < len; i++) {
         if (!(i in arr)) continue;

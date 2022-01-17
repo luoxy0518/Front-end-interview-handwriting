@@ -30,6 +30,7 @@ Function.prototype._call = function (thisArg = window, args) {
 }
 
 
+// 测试
 function sum(c) {
     return this.a + this.b + c;
 }

@@ -33,6 +33,8 @@ Function.prototype._bind = function (thisArg, ...args) {
     return newFn;
 }
 
+
+// 测试
 const obj = {
     name: 'objName'
 }

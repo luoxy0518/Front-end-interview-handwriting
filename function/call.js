@@ -34,8 +34,9 @@ Function.prototype._call = function (thisArg = window, ...args) {
 }
 
 
+// 测试
 function sum(c) {
     return this.a + this.b + c;
 }
 
-console.log(sum._call({a: 1, b:2}, 3));
+console.log(sum._call({a: 1, b:2}, 3));     // 6

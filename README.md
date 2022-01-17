@@ -9,6 +9,8 @@
 - [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/find.js)
 - [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/filter.js)
 - [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/reduce.js)
+- Array.prototype.splice 
+
 
 ## 函数
 - [Array.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/call.js)

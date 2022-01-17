@@ -1,11 +1,12 @@
 /**
  * 概述： map() 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。
+ *
  * 参数：
  * - callback
  *   - currentValue
  *   - index
  *   - arr
- * - thisArgs
+ * - thisArg
  *
  * 要点：
  * 1.跳过数组中未被初始化的元素（empty），不执行回调函数

@@ -6,7 +6,7 @@
  *   - currentValue
  *   - index
  *   - arr
- * - thisArgs
+ * - thisArg
  *
  * 要点：
  * 1.跳过数组中未被初始化的元素（empty），不执行回调函数

@@ -13,7 +13,7 @@
 
 
 ## 函数
-- [Array.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/call.js)
-- [Array.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/apply.js)
-- [Array.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/bind.js)
+- [Array.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/call.js)
+- [Array.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/apply.js)
+- [Array.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/bind.js)
 

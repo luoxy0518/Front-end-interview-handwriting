@@ -5,7 +5,8 @@
 - 与`==`不同
     - 当比较两个不同类型的数据时，`==` 会发生隐式类型转换，而`Object.is`不会。
 - 与`===`不同
-    - `NaN === NaN // false` `Object.is(NaN, NaN)`
+    - `NaN === NaN // false` `Object.is(NaN, NaN) // true`
+    - `-0 === +0 // true` `Object.is(-0 , +0)  // false`
 ###
 ```js
 Object._is = function (x, y) {

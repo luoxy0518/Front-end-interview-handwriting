@@ -7,7 +7,8 @@
 - 与`===`不同
     - `NaN === NaN // false` `Object.is(NaN, NaN) // true`
     - `-0 === +0 // true` `Object.is(-0 , +0)  // false`
-###
+    
+### 实现
 ```js
 Object._is = function (x, y) {
     if (x === y) {

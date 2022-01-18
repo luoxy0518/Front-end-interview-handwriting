@@ -1,17 +1,19 @@
-/**
- * 概述： map() 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。
- *
- * 参数：
- * - callback
- *   - currentValue
- *   - index
- *   - arr
- * - thisArg
- *
- * 要点：
- * 1.跳过数组中未被初始化的元素（empty），不执行回调函数
- * 2.有返回值，返回值是一个新数组
- */
+## Array.prototype.map
+### 概述
+`map()` 方法创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值。
+### 参数
+- callback
+    - currentValue
+    - index
+    - arr
+- thisArg
+### 要点
+1.跳过数组中未被初始化的元素（`empty`），不执行回调函数
+
+2.有返回值，返回值是一个新数组
+
+### 实现  
+```js
 Array.prototype._map = function(callback, thisArg){
     if(!this) throw new TypeError('');
     if(typeof callback !== 'function') throw new TypeError(callback + 'is not a function!');
@@ -35,3 +37,5 @@ Array.prototype._map = function(callback, thisArg){
 const a  = [1,2,3,4,,]._map((item) => item * 2);
 console.log(a);
 // [2, 4, 6, 8, empty ]
+
+```

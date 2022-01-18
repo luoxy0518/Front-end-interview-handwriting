@@ -1,20 +1,24 @@
-/**
- * 概述：reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
- *
- * 参数：
- * - callback
- *   - acc
- *   - currentValue
- *   - index
- *   - arr
- * - thisArg
- *
- * 要点：
- * 1.跳过数组中未被初始化的元素（empty），不执行回调函数
- * 2.当数组为空 并且 无初始值时，报错
- * 3.当有初始值时acc = initVal
- * 4.当无初始值时acc = arr[0]
- */
+## Array.prototype.reduce
+### 概述
+`reduce()` 方法对数组中的每个元素执行一个由您提供的`reducer`函数(升序执行)，将其结果汇总为单个返回值。
+### 参数
+- callback
+    - acc
+    - currentValue
+    - index
+    - arr
+- thisArg 
+### 要点
+1.跳过数组中未被初始化的元素（`empty`），不执行回调函数
+
+2.当数组为空 并且 无初始值时，报错
+
+3.当有初始值时`acc = initVal`
+
+4.当无初始值时`acc = arr[0]`
+### 实现
+```js
+
 Array.prototype._reduce = function (callback, initValue) {
     if (!this) throw new TypeError('this is null or undefined!');
     if (typeof callback !== 'function') throw TypeError(callback + 'is not a function!');
@@ -56,3 +60,5 @@ const sum = [, , , , 1, 10]._reduce(function (accumulator, currentValue) {
 }, 0)
 
 console.log(sum) // logs 6
+
+```

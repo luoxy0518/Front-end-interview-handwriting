@@ -4,16 +4,22 @@
 正在持续更新中...
 
 ## 数组
-- [Array.prototype.forEach](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/forEach.js)
-- [Array.prototype.map](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/map.js)
-- [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/find.js)
-- [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/filter.js)
-- [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/reduce.js)
+### 原生方法
+- [Array.prototype.forEach](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/forEach.md)
+- [Array.prototype.map](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/map.md)
+- [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/find.md)
+- [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/filter.md)
+- [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/reduce.md)
 - Array.prototype.splice 
+
+### 应用方法
+- [数组去重的三种方法](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/reduce.md)
 
 
 ## 函数
-- [Function.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/call.js)
-- [Function.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/apply.js)
-- [Function.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/bind.js)
+- [Function.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/call.md)
+- [Function.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/apply.md)
+- [Function.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/bind.md)
 
+
+## 其他高频手写

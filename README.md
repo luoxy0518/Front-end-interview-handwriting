@@ -17,10 +17,13 @@
 - [Function.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/bind.md)
 
 ## 对象
-- 实现new
+- [实现new](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/new.md)
+- [instanceof](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/instanceof.md)
+
 - Object.is
 - Object.assign  
-- instanceof
+- Object.create
+
 
 ## Promise
 

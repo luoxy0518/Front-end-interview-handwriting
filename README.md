@@ -27,7 +27,8 @@
 
 - [Object.is](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.is.md)
 - [Object.assign](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.assign.md)
-- Object.create
+- [Object.create](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.create.md)
+
 
 
 ## Promise

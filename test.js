@@ -125,12 +125,16 @@
 // console.log(obj,'---'); // { "0": "a", "1": "b", "2": "c" }
 
 
-Object._create = function(proto){
-    if(typeof proto !== 'object' && typeof proto !== 'function') throw new TypeError();
+// Object._create = function(proto){
+//     if(typeof proto !== 'object' && typeof proto !== 'function') throw new TypeError();
+//
+//     function F(){}
+//     F.prototype = proto;
+//
+//     return new F();
+// }
 
-    function F(){}
-    F.prototype = proto;
-
-    return new F();
+Array._isArray = function(arg){
+    return Object.prototype.toString.call(arg) === '[object Array]'
 }
 

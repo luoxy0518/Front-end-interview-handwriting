@@ -4,24 +4,24 @@
 正在持续更新中...
 
 ## 数组
-- [Array.prototype.forEach](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/forEach.md)
-- [Array.prototype.map](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/map.md)
-- [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/find.md)
-- [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/filter.md)
-- [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/array/reduce.md)
+- [Array.prototype.forEach](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/forEach.md)
+- [Array.prototype.map](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/map.md)
+- [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/find.md)
+- [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/filter.md)
+- [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/reduce.md)
 - Array.prototype.splice 
 
 ## 函数
-- [Function.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/call.md)
-- [Function.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/apply.md)
-- [Function.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/function/bind.md)
+- [Function.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/function/call.md)
+- [Function.prototype.apply](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/function/apply.md)
+- [Function.prototype.bind](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/function/bind.md)
 
 ## 对象
-- [new](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/new.md)
-- [instanceof](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/instanceof.md)
+- [new](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/new.md)
+- [instanceof](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/instanceof.md)
 
-- [Object.is](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/Object.is.md)
-- [Object.assign](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/Object.assign.md)
+- [Object.is](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.is.md)
+- [Object.assign](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.assign.md)
 - Object.create
 
 

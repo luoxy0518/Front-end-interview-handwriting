@@ -21,7 +21,7 @@
 - [instanceof](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/instanceof.md)
 
 - [Object.is](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/Object.is.md)
-- Object.assign  
+- [Object.assign](https://github.com/luoxy0518/front-end-interview-handwriting/tree/master/object/Object.assign.md)
 - Object.create
 
 

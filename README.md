@@ -12,8 +12,8 @@
 - Array.prototype.splice 
 
 - 较低频
-    - `Array.isArray`
-    - `Array.of`
+    - [Array.isArray](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/Array.isArray.md)
+    - [Array.of](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/Array.of.md)
 
 ## 函数
 - [Function.prototype.call](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/function/call.md)

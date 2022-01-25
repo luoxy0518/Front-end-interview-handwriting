@@ -134,7 +134,76 @@
 //     return new F();
 // }
 
-Array._isArray = function(arg){
-    return Object.prototype.toString.call(arg) === '[object Array]'
+// Array._isArray = function(arg){
+//     return Object.prototype.toString.call(arg) === '[object Array]'
+// }
+//
+// Array.prototype._flat = function (deep = 1) {
+//     const arr = this;
+//     if (deep <= 0) return arr.slice();
+//
+//     const result = [];
+//
+//     function fn(array, deep) {
+//         for (let i = 0; i < array.length; i++) {
+//             if (i in array) {
+//                 Array.isArray(array[i]) && deep > 0 ? fn(array[i], deep - 1) : result.push(array[i]);
+//             }
+//         }
+//     }
+//
+//     fn(arr, deep);
+//     return result;
+// }
+//
+// Array.prototype._flat = function (deep = 1) {
+//     const arr = this;
+//     if (deep <= 0) return arr.slice();
+//
+//     return arr.reduce((acc, cur) => acc.concat(Array.isArray(cur) && deep >= 0 ? cur._flat(deep - 1) : cur), [])
+// }
+//
+// var arr1 = [1, 2, [3, 4]];
+// console.log(arr1._flat());
+// // [1, 2, 3, 4]
+//
+// var arr2 = [1, 2, [3, 4, [5, 6]]];
+// console.log(arr2._flat());
+// // [1, 2, 3, 4, [5, 6]]
+//
+// var arr3 = [1, 2,,,,,, [3, 4, [5, 6]]];
+// console.log(arr3._flat(2));
+// // [1, 2, 3, 4, 5, 6]
+//
+// //使用 Infinity，可展开任意深度的嵌套数组
+// var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+// console.log(arr4._flat(Infinity));
+// // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// 定义生成器函数，入参是任意集合
+function iteratorGenerator(list) {
+    // idx记录当前访问的索引
+    var idx = 0
+    // len记录传入集合的长度
+    var len = list.length
+    return {
+        // 自定义next方法
+        next: function() {
+            // 如果索引还没有超出集合长度，done为false
+            var done = idx >= len
+            // 如果done为false，则可以继续取值
+            var value = !done ? list[idx++] : undefined
+
+            // 将当前值与遍历是否完毕（done）返回
+            return {
+                done: done,
+                value: value
+            }
+        }
+    }
 }
 
+var iterator = iteratorGenerator(['1号选手', '2号选手', '3号选手'])
+iterator.next()
+iterator.next()
+iterator.next()

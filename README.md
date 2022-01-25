@@ -9,7 +9,8 @@
 - [Array.prototype.find](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/find.md)
 - [Array.prototype.filter](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/filter.md)
 - [Array.prototype.reduce](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/reduce.md)
-- Array.prototype.flat   
+- [Array.prototype.flat](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/flat.md) 
+- Array.prototype.findIndex   
 - Array.prototype.splice 
 
 #### | 较低频
@@ -33,7 +34,11 @@
 ## JSON
 - JSON.parse
 - JSON.stringify
+
 ## Promise
+
+## ES6
+- 迭代器
 
 ## 其他高频手写
 - 防抖
@@ -41,11 +46,11 @@
 - 数组去重的三种方法
 - 发布订阅模式
 - 继承
-- 深拷贝
+- 深拷贝、浅拷贝
 - 数组转扁平
 - 列表转树形结构
 - 大数相加
-- setTimeout模拟setInterval  
+- setTimeout模拟setInterval
 
 ### | 函数式编程
 - 函数柯里化

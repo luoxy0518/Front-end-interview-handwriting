@@ -233,23 +233,167 @@
 // console.log(sum2(1,2)(3)(4));   // 10
 // console.log(sum2(1,2,3,4));   // 10
 
+//
+// function curry(fn){
+//     let args = [];
+//     return function buffer(...args2){
+//         args = [...args, ... args2];
+//
+//         if(args2.length === 0) {
+//             return fn.apply(this, args);
+//         }else{
+//             return buffer;
+//         }
+//     }
+// }
+//
+// function sum (a, b, c){
+//     return a+b+c;
+// }
+// const sum1 = curry(sum);
+//
+// // console.log(sum1(1)(2)(3)());
+// /**
+//  * 执行结果
+//  *  0
+//  *  1
+//  *  4
+//  *  2
+//  *  3
+//  *  5
+//  *  6
+//  *
+//  * 宏任务
+//  *
+//  *
+//  *
+//  * 微任务 p1
+//  *       p3
+//  *       p2
+//  *
+//  *
+//  *
+//  */
+//
+// // p1
+// Promise.resolve().then(() => {
+//     console.log(0);
+//     // p2
+//      Promise.resolve(4);
+// }).then((res) => {
+//     console.log(4)
+// })
+//
+// // p3
+// Promise.resolve().then(() => {
+//     console.log(1);
+//     // p4
+// }).then(() => {
+//     console.log(2);
+//     // p5
+// }).then(() => {
+//     console.log(3);
+//     // p6
+// }).then(() => {
+//     console.log(5);
+//     // p7
+// }).then(() =>{
+//     console.log(6);
+// })
 
-function curry(fn){
-    let args = [];
-    return function buffer(...args2){
-        args = [...args, ... args2];
 
-        if(args2.length === 0) {
-            return fn.apply(this, args);
-        }else{
-            return buffer;
+// Promise.resolve().then(() => {
+//     console.log(1);
+// }).then(res => {
+//     console.log(2)
+// })
+
+
+// const p = new Promise((resolve, reject) => {
+//     resolve(1)
+// })
+//
+// p.then(() => {
+//     return 1
+// }).catch((err) => {
+//     console.log(err, 'err')
+// }).then(() => {
+//     console.log(1);
+//     return new Promise((resolve, reject) => {
+//         reject('111')
+//     })
+// }).catch(() => {
+//
+// })
+
+
+// 发布订阅
+class EventEmitter {
+    constructor() {
+        // 事件管理器
+        this.events = {};
+    }
+
+    // 订阅事件
+    on(type, listener) {
+        if (this.events[type]) {
+            this.events[type].push(listener);
+        } else {
+            this.events[type] = [listener];
         }
+    }
+
+    // 只执行一次的事件，发布后需要将其删掉
+    once(type, listener) {
+        // 利用闭包
+        const once = () => {
+            listener();
+            // 事件执行后，移除
+            this.removeListener(type, once);
+        }
+
+        this.on(type, once);
+    }
+
+    // 发布/触发事件
+    emit(type) {
+        if (!this.events[type]) return;
+
+        this.events[type].forEach(fn => fn());
+    }
+
+    // 移除订阅事件
+    removeListener(type, listener) {
+        if (!this.events[type]) return;
+
+        this.events[type] = this.events[type].filter(fn => fn !== listener);
     }
 }
 
-function sum (a, b, c){
-    return a+b+c;
-}
-const sum1 = curry(sum);
+// 测试
+let em = new EventEmitter();
+let workday = 0;
+em.on("work", function() {
+    workday++;
+    console.log("work everyday");
+});
 
-console.log(sum1(1)(2)(3)());
+em.once("love", function() {
+    console.log("just love you");
+});
+
+function makeMoney() {
+    console.log("make one million money");
+}
+em.on("money",makeMoney);
+
+let time = setInterval(() => {
+    em.emit("work");
+    em.removeListener("money",makeMoney);
+    em.emit("money");
+    em.emit("love");
+    if (workday === 5) {
+        console.log("have a rest")
+        clearInterval(time);
+    }
+}, 1);

@@ -31,6 +31,10 @@
 - [Object.create](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.create.md)
 - Object.freeze
 
+### | 监听对象属性变化
+- Object.defineProperty
+- Proxy
+
 ## JSON
 - JSON.parse
 - JSON.stringify
@@ -43,8 +47,10 @@
 ## 其他高频手写
 - 防抖
 - 截流
-- 数组去重的三种方法
+- 数组去重的多种方法
+- [发布订阅模式](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/high-frequency/eventEmitter.md)
 - 发布订阅模式
+- 观察者模式
 - 继承
 - 深拷贝、浅拷贝
 - 数组转扁平

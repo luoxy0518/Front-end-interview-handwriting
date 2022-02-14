@@ -4,13 +4,13 @@
 
 `Vue2.0`的响应式主要依靠`ES5`的`Object.defineProperty()`来实现。
 
-### Object.defineProperty() 缺点
+### Q: Object.defineProperty() 缺点
 
 - `IE8` 及更低版本 `IE` 是不支持的
 - **无法监听到对象属性的 新增 或 删除操作**
 - **无法监听到数组的变异方法（例：`push`/`pop`等），无法监听到数组的`length`属性变化**
 
-#### 为什么Object.defineProperty()无法监听到数组变异方法？
+#### Q: 为什么Object.defineProperty()无法监听到数组变异方法？
 因为`Object.defineProperty()`无法劫持`length`变化。`length`的属性描述符如下：
 
 ![img.png](./img/img.png)

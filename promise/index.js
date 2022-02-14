@@ -1,25 +1,4 @@
-/**
- * const p = new Promise((resolve, reject) => {
- *     resolve();
- *     reject();
- * });
- *
- * p.then((value) => {
- *     console.log(value);
- * }, err => {
- *     console.log(err);
- * });
- *
- * p
- * .then((value) => {
- *     console.log(value);
- *     return 1;
- * })
- * .catch(err => console.log(err))
- * .then(val => console.log(val))
- */
-
-// 定义三种状态
+// 实现Promise全部代码
 const PROMISE_PENDING = 'pending';
 const PROMISE_FULFILLED = 'fulfilled';
 const PROMISE_REJECTED = 'rejected';

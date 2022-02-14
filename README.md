@@ -37,7 +37,17 @@
 - JSON.stringify
 
 ## Promise
+- [new Promise及Promise.prototype.then()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise)
+- [Promise.prototype.catch()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.prototype.catch())
+- [Promise.prototype.finally()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.prototype.finally())
+- [Promise.resolve()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.resolve())
+- [Promise.reject()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.reject())
+- [Promise.all()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.all())
+- [Promise.allSettled()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.allSettled())
+- [Promise.race()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.race())
+- [Promise.any()](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/README.md#实现Promise.any())
 
+- [完整代码](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/promise/index.js)
 ## ES6
 - 迭代器
 

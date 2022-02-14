@@ -13,7 +13,7 @@
 - Array.prototype.findIndex   
 - Array.prototype.splice 
 
-#### | 较低频
+### | 较低频
 - [Array.isArray](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/Array.isArray.md)
 - [Array.of](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/array/Array.of.md)
 
@@ -31,9 +31,6 @@
 - [Object.create](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/object/Object.create.md)
 - Object.freeze
 
-### | 监听对象属性变化
-- Object.defineProperty
-- Proxy
 
 ## JSON
 - JSON.parse
@@ -44,12 +41,12 @@
 ## ES6
 - 迭代器
 
+
 ## 其他高频手写
 - 防抖
 - 截流
 - 数组去重的多种方法
-- [发布订阅模式](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/high-frequency/eventEmitter.md)
-- 发布订阅模式
+- [EventBus事件总线/发布订阅模式](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/high-frequency/eventEmitter.md)
 - 观察者模式
 - 继承
 - 深拷贝、浅拷贝
@@ -57,6 +54,12 @@
 - 列表转树形结构
 - 大数相加
 - setTimeout模拟setInterval
+- 实现并发请求控制
+- 大文件上传
+### | 框架  
+- 响应式核心原理实现
+    - [Vue2.0（`Object.defineProperty()`）](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/vue/Vue2.0-defineProperty.md)
+    - [Vue3.0（`Proxy`）](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/vue/Vue3.0-reactive.md)
 
 ### | 函数式编程
 - 函数柯里化

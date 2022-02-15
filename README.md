@@ -73,13 +73,13 @@
 ### | React
 - useState
 - useEffect
-### | 函数式编程
-- 函数柯里化
-- 偏函数
-- 惰性函数
-- 级联函数
-- 回调函数
-- 函数记忆
+### | 函数类型
+- [函数柯里化](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/curry.md)
+- [偏函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/partial-function.md)
+- [惰性函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/lazy-function.md)
+- [级联/链式函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/chain-function.md)
+- [回调函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/callback-function.md)
+- [函数记忆](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/memory-function.md)
 
 ### | 实现类的继承
 - 组合式继承

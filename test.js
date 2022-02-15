@@ -670,111 +670,183 @@
 //         console.log(`${this.key}属性更新了`)
 //         this.cb.call(this.vm, this.vm[this.key])
 //     }
+// // }
+// function isObject(val) {
+//     return typeof val === 'object' && val !== null;
 // }
-function isObject(val) {
-    return typeof val === 'object' && val !== null;
-}
+//
+// function observe(obj) {
+//     Object.entries(obj).forEach(([k, v]) => {
+//         reactiveObj(obj, k, v);
+//     })
+// }
+//
+// function reactiveObj(obj, key, value) {
+//     // 子属性为对象，继续递归，进行响应式监听
+//     if (isObject(value)) observe(value);
+//
+//     // 重新定义已有属性的getter/setter
+//     Object.defineProperty(obj, key, {
+//         set(newVal) {
+//             const oldVal = obj[key];
+//
+//             if (oldVal !== newVal) {
+//                 // 赋新值为对象时，进行深度监听
+//                 if (isObject(newVal)) observe(newVal);
+//
+//                 obj[key] = newVal;
+//                 // 当值发生改变时，触发通知机制，改变视图等
+//                 // notify();
+//             }
+//         },
+//         get() {
+//             return obj[key];
+//         }
+//     })
+// }
+//
+// // 数组原型链的变异方法
+// const arrayProto = Array.prototype;
+// // 数组和其原型上，加了一层，其内容是自定义重写后的方法
+// const arrayMethods = Object.create(arrayProto);
+// // 七种需要主动拦截的数组变异方法
+// const methodsTopPatch = [
+//     'pop',
+//     'push',
+//     'shift',
+//     'unshift',
+//     'splice',
+//     'slice',
+//     'sort'
+// ];
+//
+// methodsTopPatch.forEach(methodName => {
+//     const origin = arrayProto[methodName];
+//
+//     def(arrayMethods, methodName, function () {
+//         const args = [...arguments];
+//         const ob = this.__ob__;
+//         const result = origin.apply(this, args);
+//
+//         // 获取到新增元素组成的数组
+//         let inserted;
+//         switch (methodName) {
+//             case 'push':
+//             case 'unshift':
+//                 inserted = args;
+//                 break;
+//             case 'splice':
+//                 inserted = args.splice(2);
+//                 break;
+//         }
+//         // 如果存在新增数组，则需要将新增的数组变为响应式数组
+//         if (inserted) ob.observeArray(inserted);
+//
+//         // 通知依赖进行更新
+//         ob.dep.notify();
+//
+//         // 返回原数组方法执行后结果
+//         return result;
+//     });
+//
+// });
+//
+// /**
+//  * 定义自己的数组方法，目的实现数据劫持
+//  * @param obj
+//  * @param key
+//  * @param value
+//  * @param enumerable
+//  */
+// function def(obj, key, value, enumerable) {
+//     Object.defineProperty(obj, key, {
+//         value,
+//         enumerable: !!enumerable,
+//         configurable: true,
+//         writable: true,
+//     })
+// }
+//
+// /**
+//  * 将数组变为响应式数组
+//  * @param array
+//  */
+// Observer.prototype.observeArray = function(array){
+//     for(let i = 0; i < array.length; i++){
+//         observe(array[i]);
+//     }
+// }
+//
 
-function observe(obj) {
-    Object.entries(obj).forEach(([k, v]) => {
-        reactiveObj(obj, k, v);
-    })
-}
+//
+// function partial(fn, ...args){
+//     return function(...otherArgs){
+//         return fn.apply(this, [...args,...otherArgs]);
+//     }
+// }
+//
+// // 将占位符定义为 对象，防止其他值被误认为占位符
+// const _ = {};
+// function partialPlus(fn, ...args){
+//     return function(...otherArgs){
+//         let index = 0;
+//         const len = args.length;
+//
+//         // 遇到占位符，则按照顺序取第二次函数执行时的参数
+//         for(let i = 0; i < len; i++){
+//             args[i] = (args[i] === _ ? otherArgs[index++] : args[i]);
+//         }
+//         // 在补上占位符后，若第二次的函数还有剩余，拼接到参数中
+//         while(index < otherArgs.length) {
+//             args.push(otherArgs[index++]);
+//         }
+//
+//         // 调用函数并返回结果
+//         return fn.apply(this, args);
+//     }
+// }
+//
+//
+// const fn = partialPlus(function(a, b, c) {
+//     console.log([a, b, c]);
+// },"a", _, "c");
+//
+// fn("b") // ["a", "b", "c"]
 
-function reactiveObj(obj, key, value) {
-    // 子属性为对象，继续递归，进行响应式监听
-    if (isObject(value)) observe(value);
 
-    // 重新定义已有属性的getter/setter
-    Object.defineProperty(obj, key, {
-        set(newVal) {
-            const oldVal = obj[key];
+// function addEvent(dom, type, fn) {
+//     if (dom.addEventListener) {
+//         // IE9及以上支持
+//         dom.addEventListener(type, fn);
+//     } else if (dom.attachEvent) {
+//         // IE8及以下支持
+//         dom.attachEvent('on' + type, fn);
+//     } else {
+//         // 全支持
+//         dom['on' + type] = fn;
+//     }
+// }
 
-            if (oldVal !== newVal) {
-                // 赋新值为对象时，进行深度监听
-                if (isObject(newVal)) observe(newVal);
 
-                obj[key] = newVal;
-                // 当值发生改变时，触发通知机制，改变视图等
-                // notify();
-            }
-        },
-        get() {
-            return obj[key];
-        }
-    })
-}
+function memoize(f) {
+    const cache = {};
+    return function (...args) {
+        const key = JSON.stringify(args);
+        console.log(key,cache);
+        if (Reflect.has(cache, key)) return cache[key];
 
-// 数组原型链的变异方法
-const arrayProto = Array.prototype;
-// 数组和其原型上，加了一层，其内容是自定义重写后的方法
-const arrayMethods = Object.create(arrayProto);
-// 七种需要主动拦截的数组变异方法
-const methodsTopPatch = [
-    'pop',
-    'push',
-    'shift',
-    'unshift',
-    'splice',
-    'slice',
-    'sort'
-];
-
-methodsTopPatch.forEach(methodName => {
-    const origin = arrayProto[methodName];
-
-    def(arrayMethods, methodName, function () {
-        const args = [...arguments];
-        const ob = this.__ob__;
-        const result = origin.apply(this, args);
-
-        // 获取到新增元素组成的数组
-        let inserted;
-        switch (methodName) {
-            case 'push':
-            case 'unshift':
-                inserted = args;
-                break;
-            case 'splice':
-                inserted = args.splice(2);
-                break;
-        }
-        // 如果存在新增数组，则需要将新增的数组变为响应式数组
-        if (inserted) ob.observeArray(inserted);
-
-        // 通知依赖进行更新
-        ob.dep.notify();
-
-        // 返回原数组方法执行后结果
-        return result;
-    });
-
-});
-
-/**
- * 定义自己的数组方法，目的实现数据劫持
- * @param obj
- * @param key
- * @param value
- * @param enumerable
- */
-function def(obj, key, value, enumerable) {
-    Object.defineProperty(obj, key, {
-        value,
-        enumerable: !!enumerable,
-        configurable: true,
-        writable: true,
-    })
-}
-
-/**
- * 将数组变为响应式数组
- * @param array
- */
-Observer.prototype.observeArray = function(array){
-    for(let i = 0; i < array.length; i++){
-        observe(array[i]);
+        return cache[key] = f.apply(this, args);
     }
 }
 
 
+function add(a, b) {
+    return a + b;
+}
+
+// 假设 memoize 可以实现函数记忆
+var memoizedAdd = memoize(add);
+console.log(memoizedAdd);
+
+console.log(memoizedAdd(1, 2)); // 3
+console.log(memoizedAdd(1, 2)); // 相同的参数，第二次调用时，从缓存中取出数据，而非重新计算一次

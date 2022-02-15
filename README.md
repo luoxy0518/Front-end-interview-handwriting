@@ -80,7 +80,7 @@
 - [级联/链式函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/chain-function.md)
 - [回调函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/callback-function.md)
 - [函数记忆](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/memory-function.md)
-
+- 函数睡眠
 ### | 实现类的继承
 - 组合式继承
 

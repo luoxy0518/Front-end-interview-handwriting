@@ -18,7 +18,7 @@
 ### 实现
 ```js
 Function.prototype._bind = function (thisArg, ...args) {
-const fn = this;
+    const fn = this;
 
     // bind会返回一个新的函数
     function newFn (...args2) {

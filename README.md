@@ -66,6 +66,11 @@
 - setTimeout模拟setInterval
 - 实现并发请求控制
 - 大文件上传
+- 大文件的分片上传和断点续传
+- 设计和实现一个 LRU (最近最少使用) 缓存机制
+- script 标签里分别设置 defer 和 async， 它们的执行顺序是怎么样的
+- 虚拟列表
+- 自己实现let const
 ### | Vue  
 - 响应式核心原理实现
     - [Vue2.0（`Object.defineProperty()`）](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/vue/Vue2.0-defineProperty.md)
@@ -74,6 +79,7 @@
 - useState
 - useEffect
 ### | 函数类型
+- 纯函数
 - [函数柯里化](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/curry.md)
 - [偏函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/partial-function.md)
 - [惰性函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/lazy-function.md)
@@ -82,6 +88,7 @@
 - [函数记忆](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/memory-function.md)
 - [高阶函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/higher-order-function.md)
 - 函数睡眠
+- [组合（Compose）函数](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/functional-programming/compose-function.md)
 
 ### | 实现类的继承
 - 组合式继承

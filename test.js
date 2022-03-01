@@ -828,25 +828,67 @@
 // }
 
 
-function memoize(f) {
-    const cache = {};
-    return function (...args) {
-        const key = JSON.stringify(args);
-        console.log(key,cache);
-        if (Reflect.has(cache, key)) return cache[key];
+// function memoize(f) {
+//     const cache = {};
+//     return function (...args) {
+//         const key = JSON.stringify(args);
+//         console.log(key,cache);
+//         if (Reflect.has(cache, key)) return cache[key];
+//
+//         return cache[key] = f.apply(this, args);
+//     }
+// }
+//
+//
+// function add(a, b) {
+//     return a + b;
+// }
+//
+// // 假设 memoize 可以实现函数记忆
+// var memoizedAdd = memoize(add);
+// console.log(memoizedAdd);
+//
+// console.log(memoizedAdd(1, 2)); // 3
+// console.log(memoizedAdd(1, 2)); // 相同的参数，第二次调用时，从缓存中取出数据，而非重新计算一次
 
-        return cache[key] = f.apply(this, args);
+
+function double(a, b) {
+    return (a + b) * 2;
+}
+
+function square(val) {
+    return val ** 2;
+}
+
+function log(val) {
+    console.log(val)
+}
+
+// 需求： 输入a,b，先将a + b 的和变为2倍，再平方，最后打印出来
+// 常规做法：
+// log(square(double(1,2)));
+
+function compose(...fns) {
+    let length = fns.length,
+        startIndex = 0;
+    // 检验元素是否为函数类型
+    fns.forEach(fn => {
+        if(typeof fn !== 'function')  throw new TypeError('arguments item must be a function!');
+    });
+
+    if (length === 1) return fns[0];
+
+    // 传入的初始参数
+    return function (...args) {
+        // 第一次传参会作为初始值
+        let result = fns[startIndex++].apply(this, args);
+
+        while (startIndex < length) {
+            // 前一次函数的返回值，会作为下一次函数的入参
+            result = fns[startIndex++].call(this, result);
+        }
+        return result;
     }
 }
 
-
-function add(a, b) {
-    return a + b;
-}
-
-// 假设 memoize 可以实现函数记忆
-var memoizedAdd = memoize(add);
-console.log(memoizedAdd);
-
-console.log(memoizedAdd(1, 2)); // 3
-console.log(memoizedAdd(1, 2)); // 相同的参数，第二次调用时，从缓存中取出数据，而非重新计算一次
+compose(double, square, log, 1)(1, 2);      // 36

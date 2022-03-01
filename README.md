@@ -98,3 +98,6 @@
 - [选择排序](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/sorting-algorithm/selection-sort.md)
 - [插入排序](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/sorting-algorithm/insertion-sort.md)
 - 快速排序
+- 希尔排序
+- 归并排序
+- 堆排序

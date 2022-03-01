@@ -30,3 +30,7 @@ function insertSort(arr) {
 
 console.log(insertSort([1, 2, 3111, 0, 32, 21,0]));
 ```
+
+#### 推荐阅读
+- [十大经典排序算法（动图演示）](https://www.cnblogs.com/onepixel/p/7674659.html)
+- [排序算法](https://zxpsuper.github.io/Demo/advanced_front_end/suanfa/sort.html#_1-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)

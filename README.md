@@ -94,7 +94,7 @@
 - 组合式继承
 
 ### | 常见排序方法
-- 冒泡排序
+- [冒泡排序](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/sorting-algorithm/bubble-sort.md)
+- [选择排序](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/sorting-algorithm/selection-sort.md)
+- [插入排序](https://github.com/luoxy0518/front-end-interview-handwriting/blob/main/sorting-algorithm/insertion-sort.md)
 - 快速排序
-- 选择排序
-- 插入排序
